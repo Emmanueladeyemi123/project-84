@@ -28,21 +28,47 @@ function my_keydown(e)
 	console.log(keyPressed);
 	
 		if((keyPressed >=97 && keyPressed<=122)|| (keyPressed >=65 && keyPressed<=90))
+		{
 		aplhabetkey();
 		document.getElementById("d1").innerHTML="you pressed alphabet key";
 		console.log("alphabet key");
-		//write a code to check the type of key pressed
+		}
+		else if(keyPressed >=48 && keyPressed<=57)
+		{
+		numberkey();
+		document.getElementById("d1").innerHTML="you pressed number key";
+		console.log("number key");
+		}
+		else if(keyPressed >=37 && keyPressed<=40)
+		{
+		arrowkey();
+		document.getElementById("d1").innerHTML="you pressed arrow key";
+		console.log("arrow key");
+		}
+		
+		else if((keyPressed =17) ||(keyPressed = 18 )||( keyPressed = 27))
+		{
+		specialkey();
+		document.getElementById("d1").innerHTML="you pressed special key";
+		console.log("special key");
+		}
+		else{
+		otherkey();
+		document.getElementById("d1").innerHTML="you pressed other key";
+		console.log("other key");
+		}		//write a code to check the type of key pressed
 }
 
 function aplhabetkey()
 {
 	//upload respective image with the message. 
-
+	img_image="Alpkey.png";
+	add();
 
 }
 function numberkey()
 {
-	img_image="Alpkey.png";
+	img_image="numkey.png";
 	add();
 }
 function arrowkey()
